@@ -1,0 +1,90 @@
+<!--Full Name (Text Input)
+○ Email Address (Email Input)
+○ Password (Password Input for account verification)
+○ Feedback Category (Dropdown/Select Input)
+○ Preferred Contact Method (Radio Buttons)
+○ Additional Features of Interest (Checkboxes)
+○ Comments (Textarea)
+○ Submit Button (to send the data-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        .contact
+        {
+            width:20rem;
+        }
+        fieldset
+        {
+            background-color: rgb(196, 218, 174);
+        }
+       
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <fieldset class="contact">
+            <legend>Feedback Form</legend></br>
+                <!-- Name Input -->
+                <label for="name">Name:</label></br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="8" required></br></br>
+            
+                 <!-- Email Input -->
+                <label for="email">Email:</label></br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required></br></br>
+            
+                <!-- Password Input -->
+                <label for="password">Password:</label></br>
+                <input type="password" id="password" name="password" minlength="8" required></br></br>
+
+                <!-- Feedback Categories-->
+                <label for="feedback">Choose a category:</label>    
+
+                <select name="feedback" id="feedback">
+                  <option value="loveit">Love It    </option>
+                  <option value="brilliant">Brilliant</option>
+                  <option value="Meh">Meh</option>
+                  <option value="Average">Average</option>
+                  <option value="Yuck">Yuck!</option>
+                </select> 
+            </br></br>
+           <!-- Contact Method -->
+           
+               <label>Preferred Contact Method:</label>
+               <label for="email-contact">
+                   <input type="radio" id="email-contact" name="contact" value="email" checked> Email
+               </label>
+               <label for="phone-contact">
+                   <input type="radio" id="phone-contact" name="contact" value="phone"> Phone
+               </label>
+            </br></br>
+        
+           <!-- Interests -->
+           
+               <legend>Additional Features of Interests:</legend></br>
+                    <label for="Coding">
+                        <input type="checkbox" id="coding" name="interests" value="coding"  > Coding
+                    </label>
+                    <label for="Design">
+                        <input type="checkbox" id="design" name="interests" value="design" checked> Design
+                    </label>
+                    <label for="Testing">
+                        <input type="checkbox" id="testing" name="interests" value="testing"> Testing
+                        </label>
+                        <label for="Sales">
+                        <input type="checkbox" id="sales" name="interests" value="sales"> Support
+                        </label>
+            <!-- Comments --></br></br>
+           <legend>Comments</legend>
+           <textarea id="comments" name="comments" rows="5" cols="42" placeholder="Write your comments here"></textarea></br></br>
+           <input type="submit" value="Submit">
+        </fieldset></br>
+         <!-- Submit Button -->
+           
+        </form>
+</body>
+</html>
